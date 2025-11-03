@@ -39,12 +39,12 @@
 ## Tasks
 ### Task 1
 
-<a href="task1.py"><strong>Task 1 Code</strong></a>
 Assigned Path</a>
+<a href="task1.py"><strong>Task 1 Code</strong></a>
 
 ### Task 2
 
-<a href="task2.py"><strong>Task 2</strong></a>
+<a href="task2.py"><strong>Task 2 Code</strong></a>
 
 ### README.md Report
 
