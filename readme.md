@@ -35,14 +35,16 @@
 7. Sylvia, Lau Tsz Wing (25068927D)
 </a>
 
-<!-- Student Tasks -->
-## Student Tasks (will be updated later, testing)
 
-### Path Planning Tasks Tasks
+## Tasks
+### Task 1
 
-<a href="Lecture Notes/Slides by Topics/Compulsory Tasks.pdf"><strong>Compulsory Tasks</strong></a> || <strong>[Tutorial link](https://youtu.be/hmlWX5OEs5U)</strong>
+<a href="task1.py"><strong>Task 1 Code</strong></a>
+Assigned Path</a>
 
-<a href="Lecture Notes/Slides by Topics/Additional Tasks.pdf"><strong>Additional Tasks</strong></a>
+### Task 2
+
+<a href="task2.py"><strong>Task 2</strong></a>
 
 ### README.md Report
 
