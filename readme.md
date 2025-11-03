@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h3 align="center">PolyU AAE1001 GitHub Project</h3>
+  <h3 align="center">PolyU AAE1001 GitHub Project (Five Egg and Toast)</h3>
 
   <p align="center">
     <br />
