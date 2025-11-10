@@ -1,1 +1,32 @@
+def calculate_trip_time_with_penalties(base_time, fuel_penalty_areas, time_penalty_areas):
+    """
+    Calculate total trip time considering penalty areas
+    
+    Parameters:
+    - base_time: Base travel time in minutes
+    - fuel_penalty_areas: List of coordinates in fuel penalty areas
+    - time_penalty_areas: List of coordinates in time penalty areas
+    
+    Returns:
+    - total_time: Adjusted total time with penalties
+    """
+    # Count nodes in penalty areas (you need to implement this based on your path)
+    fuel_penalty_nodes = len(fuel_penalty_areas)  # Replace with actual count
+    time_penalty_nodes = len(time_penalty_areas)  # Replace with actual count
+    
+    # Apply penalties (30% for time, 15% for fuel as per task description)
+    total_time = base_time + (fuel_penalty_nodes * 0.15) + (time_penalty_nodes * 0.30)
+    
+    return total_time
 
+# Example usage for Group 5:
+def get_group5_penalty_areas():
+    """
+    Define penalty areas for Group 5 based on the provided map
+    You need to identify which nodes fall in penalty areas from your path
+    """
+    # These are example coordinates - you need to identify actual penalty nodes from your path
+    fuel_penalty_areas = [(30, 35), (25, 45), (10, 45)]  # Example - replace with actual
+    time_penalty_areas = [(30, 0), (20, 0), (25, 20)]    # Example - replace with actual
+    
+    return fuel_penalty_areas, time_penalty_areas
