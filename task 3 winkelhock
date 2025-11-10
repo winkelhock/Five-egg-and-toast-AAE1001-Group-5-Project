@@ -1,32 +1,158 @@
-def calculate_trip_time_with_penalties(base_time, fuel_penalty_areas, time_penalty_areas):
-    """
-    Calculate total trip time considering penalty areas
-    
-    Parameters:
-    - base_time: Base travel time in minutes
-    - fuel_penalty_areas: List of coordinates in fuel penalty areas
-    - time_penalty_areas: List of coordinates in time penalty areas
-    
-    Returns:
-    - total_time: Adjusted total time with penalties
-    """
-    # Count nodes in penalty areas (you need to implement this based on your path)
-    fuel_penalty_nodes = len(fuel_penalty_areas)  # Replace with actual count
-    time_penalty_nodes = len(time_penalty_areas)  # Replace with actual count
-    
-    # Apply penalties (30% for time, 15% for fuel as per task description)
-    total_time = base_time + (fuel_penalty_nodes * 0.15) + (time_penalty_nodes * 0.30)
-    
-    return total_time
+import math
 
-# Example usage for Group 5:
-def get_group5_penalty_areas():
-    """
-    Define penalty areas for Group 5 based on the provided map
-    You need to identify which nodes fall in penalty areas from your path
-    """
-    # These are example coordinates - you need to identify actual penalty nodes from your path
-    fuel_penalty_areas = [(30, 35), (25, 45), (10, 45)]  # Example - replace with actual
-    time_penalty_areas = [(30, 0), (20, 0), (25, 20)]    # Example - replace with actual
+class AircraftDesigner:
+    def __init__(self):
+        # Scenario 1 parameters
+        self.passengers_needed = 3300
+        self.max_flights_per_week = 13
+        self.time_cost_level = "medium"
+        self.fuel_cost_per_kg = 0.85
+        self.trip_time = None  # This should be calculated from your path planning
+        
+        # Base parameters
+        self.base_time_cost = 12  # $/min
+        self.time_cost_increment = 2  # $/min per 50 passengers
+        self.engine_fuel_consumption = 20  # kg/min per engine
+        self.twin_engine_fixed_cost = 2000  # $
+        self.four_engine_fixed_cost = 2500  # $
+        
+    def calculate_optimal_aircraft(self, trip_time):
+        """
+        Calculate the optimal aircraft design for Scenario 1
+        """
+        self.trip_time = trip_time
+        best_cost = float('inf')
+        best_design = None
+        
+        # Test different passenger capacities (from 100 to 450 in steps of 50)
+        for capacity in range(100, 451, 50):
+            # Calculate required number of flights
+            num_flights = math.ceil(self.passengers_needed / capacity)
+            
+            # Check if within flight limit
+            if num_flights > self.max_flights_per_week:
+                continue
+                
+            # Determine engine configuration
+            if capacity >= 300:
+                engine_count = 4
+                fixed_cost = self.four_engine_fixed_cost
+            else:
+                engine_count = 2
+                fixed_cost = self.twin_engine_fixed_cost
+            
+            # Calculate time cost based on capacity
+            capacity_increments = (capacity - 100) // 50
+            time_cost = self.base_time_cost + (capacity_increments * self.time_cost_increment)
+            
+            # Calculate fuel consumption
+            fuel_consumption_rate = engine_count * self.engine_fuel_consumption
+            
+            # Calculate total trip cost for all flights
+            trip_fuel = fuel_consumption_rate * self.trip_time
+            cost_per_flight = (self.fuel_cost_per_kg * trip_fuel * self.trip_time + 
+                             time_cost * self.trip_time + fixed_cost)
+            total_cost = cost_per_flight * num_flights
+            
+            # Store best design
+            if total_cost < best_cost:
+                best_cost = total_cost
+                best_design = {
+                    'name': f"PolyU-A{capacity}",
+                    'passenger_capacity': capacity,
+                    'engine_count': engine_count,
+                    'num_flights': num_flights,
+                    'fuel_consumption_rate': fuel_consumption_rate,
+                    'time_cost_per_min': time_cost,
+                    'fixed_cost': fixed_cost,
+                    'cost_per_flight': cost_per_flight,
+                    'total_cost': total_cost
+                }
+        
+        return best_design
     
-    return fuel_penalty_areas, time_penalty_areas
+    def print_design_report(self, design, trip_time):
+        """
+        Print a detailed report of the aircraft design
+        """
+        print("=" * 60)
+        print("AIRCRAFT DESIGN REPORT - GROUP 5")
+        print("=" * 60)
+        print(f"Scenario: 3300 passengers, max 13 flights, medium time cost")
+        print(f"Trip time: {trip_time} minutes")
+        print(f"Fuel cost: ${self.fuel_cost_per_kg}/kg")
+        print()
+        
+        print("DESIGNED AIRCRAFT SPECIFICATIONS:")
+        print(f"  Aircraft Name: {design['name']}")
+        print(f"  Passenger Capacity: {design['passenger_capacity']}")
+        print(f"  Engine Configuration: {design['engine_count']}-engine")
+        print(f"  Number of Flights Required: {design['num_flights']}")
+        print(f"  Fuel Consumption Rate: {design['fuel_consumption_rate']} kg/min")
+        print(f"  Time Cost: ${design['time_cost_per_min']}/min")
+        print(f"  Fixed Cost per Flight: ${design['fixed_cost']}")
+        print()
+        
+        print("COST BREAKDOWN:")
+        print(f"  Cost per Flight: ${design['cost_per_flight']:.2f}")
+        print(f"  Total Weekly Cost: ${design['total_cost']:.2f}")
+        print()
+        
+        # Calculate cost components
+        fuel_cost_component = (self.fuel_cost_per_kg * 
+                             design['fuel_consumption_rate'] * trip_time * trip_time)
+        time_cost_component = design['time_cost_per_min'] * trip_time
+        fixed_cost_component = design['fixed_cost']
+        
+        print("COST COMPONENTS PER FLIGHT:")
+        print(f"  Fuel Cost: ${fuel_cost_component:.2f}")
+        print(f"  Time Cost: ${time_cost_component:.2f}")
+        print(f"  Fixed Cost: ${fixed_cost_component:.2f}")
+        print()
+        
+        print("DESIGN RATIONALE:")
+        if design['engine_count'] == 4:
+            print("  - 4-engine configuration required for capacity ≥ 300 passengers")
+        else:
+            print("  - 2-engine configuration sufficient for capacity < 300 passengers")
+        
+        print(f"  - Capacity optimized to minimize total flights while staying within limit")
+        print(f"  - Time cost increases by ${self.time_cost_increment}/min per 50 passengers")
+        print("  - Design balances passenger capacity with operational efficiency")
+
+def main():
+    # Create aircraft designer
+    designer = AircraftDesigner()
+    
+    # You need to calculate the actual trip time from your path planning
+    # For demonstration, I'll use the example trip time from Task 1 (120 minutes)
+    # Replace this with your actual calculated trip time for Group 5
+    trip_time = 120  # minutes - REPLACE WITH YOUR CALCULATED TRIP TIME
+    
+    # Calculate optimal design
+    optimal_design = designer.calculate_optimal_aircraft(trip_time)
+    
+    if optimal_design:
+        designer.print_design_report(optimal_design, trip_time)
+        
+        # Additional analysis - compare with existing aircraft
+        print("\n" + "=" * 60)
+        print("COMPARISON WITH EXISTING AIRCRAFT")
+        print("=" * 60)
+        
+        # Existing aircraft costs for comparison (from Task 1)
+        existing_aircraft = [
+            {"name": "A321neo", "capacity": 200, "flights": 17, "cost": 81840},
+            {"name": "A330-900neo", "capacity": 300, "flights": 11, "cost": 83048},
+            {"name": "A350-900", "capacity": 350, "flights": 10, "cost": 81240}
+        ]
+        
+        print(f"Our designed aircraft: {optimal_design['name']}")
+        print(f"Total cost: ${optimal_design['total_cost']:.2f}")
+        print(f"Cost savings vs best existing: ${81240 - optimal_design['total_cost']:.2f}")
+        
+    else:
+        print("No feasible design found within the constraints!")
+
+if __name__ == "__main__":
+    main()
