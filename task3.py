@@ -1,9 +1,3 @@
-# ===============================================
-# AIRCRAFT COST OPTIMIZER - TASK 3 (Python for VS Code)
-# Works perfectly in Visual Studio Code (HKU / PolyU / HKUST)
-# Just press F5 or "Run Python File"
-# ===============================================
-
 import math
 import matplotlib.pyplot as plt
 
