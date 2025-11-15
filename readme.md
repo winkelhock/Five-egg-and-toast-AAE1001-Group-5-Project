@@ -57,7 +57,7 @@
 ### Task Path
 ### Path Planning
 
-### 3. Task 1
+## 3. Task 1
 <a href="task1.py"><strong>Task 1 Code</strong></a>
 #### Description
 #### Calculation Method
@@ -70,7 +70,7 @@
 #### Cost Function with Manual Calculation
 #### Outputs
 
-### 4. Task 2
+## 4. Task 2
 <a href="task2.py"><strong>Task 2 Code</strong></a>
 #### Introducing Jetstream
 #### Description
@@ -78,23 +78,23 @@
 #### Optimal Placement
 #### Results
 
-### 5. Task 3
+## 5. Task 3
 <a href="task3.py"><strong>Task 3 Code</strong></a>
 #### Introduction
 #### Scenarios
 #### Calculation
 
-### 6. Additional Task 1
+## 6. Additional Task 1
 <a href="taska1.py"><strong>Task A1 Code</strong></a>
 #### Modified Code
 #### Results
 
-### 7. Additional Task 2
+## 7. Additional Task 2
 <a href="taska2.py"><strong>Task A2 Code</strong></a>
 #### Description
 #### Results with modified code
 
-### 8. Additional Task 3
+## 8. Additional Task 3
 <a href="task a3/A star task a3.py"><strong>Task A3 Astar Code</strong></a>
 <a href="task a3/Dijkstra task a3.py"><strong>Task A3 Dijkstra Code</strong></a>
 <a href="task a3/RRT task a3.py"><strong>Task A3 RRT Code</strong></a>
