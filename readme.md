@@ -52,7 +52,7 @@
 
 <!-- Tasks -->
 ## Tasks
-<!-- Task 1 -->
+
 ## Task 1
 
 <a href="task1.py"><strong>Task 1 Code</strong></a>
