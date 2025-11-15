@@ -49,6 +49,18 @@
 
 <a href="task3.py"><strong>Task 3 Code</strong></a>
 
+### Task A1
+
+<a href="taska1.py"><strong>Task A1 Code</strong></a>
+
+### Task A2
+
+<a href="taska2.py"><strong>Task A2 Code</strong></a>
+
+### Task A3
+
+<a href="taska3.py"><strong>Task A1 Code</strong></a>
+
 <!-- Presentation -->
 ## Presentation
 
