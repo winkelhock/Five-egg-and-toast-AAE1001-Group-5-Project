@@ -83,6 +83,8 @@ Then, we established a section that systematically tests every possible vertical
 
 The cost calculation logic was then performed via the planning method; whereby the 5% cost reduction was applied to the path search during the AStar algorithm. The code checks if the current node is inside the jet stream area while the discount code reduces the node cost by a maximum of 5% as it is set to 0.05.
 
+Finally, after the loop determines the best time (The lowest cost found), the function shown in the image below takes the optimal time and uses the pandas Dataframe to perform the financial analysis based on scenario 1. 
+
 
 #### Optimal Placement
 #### Results
