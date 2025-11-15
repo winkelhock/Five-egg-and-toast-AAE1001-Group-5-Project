@@ -43,7 +43,7 @@
 </details>
 
 <!-- Group Members and Roles -->
-## Group Members and Roles
+## 1. Group Members and Roles
 1. Winkelhock, Yau Yue Hong Winkelhock (25034703D)
 2. Rodgers, Rodgers Mawalla Maighacho (2509499D)
 3. Manny, So Yee Man (25079801D)
@@ -53,14 +53,14 @@
 7. Sylvia, Lau Tsz Wing (25068927D)
 
 <!-- Introduction -->
-## Introduction
+## 2. Introduction
 ### Task Path
 ### Path Planning
 
 <!-- Tasks -->
 ## Tasks
 
-### Task 1
+### 3. Task 1
 <a href="task1.py"><strong>Task 1 Code</strong></a>
 #### Description
 #### Calculation Method
@@ -72,7 +72,7 @@
 #### Cost Function with Manual Calculation
 #### Outputs
 
-### Task 2
+### 4. Task 2
 <a href="task2.py"><strong>Task 2 Code</strong></a>
 #### Introducing Jetstream
 #### Description
@@ -80,23 +80,23 @@
 #### Optimal Placement
 #### Results
 
-### Task 3
+### 5. Task 3
 <a href="task3.py"><strong>Task 3 Code</strong></a>
 #### Introduction
 #### Scenarios
 #### Calculation
 
-### Additional Task 1
+### 6. Additional Task 1
 <a href="taska1.py"><strong>Task A1 Code</strong></a>
 #### Modified Code
 #### Results
 
-### Additional Task 2
+### 7. Additional Task 2
 <a href="taska2.py"><strong>Task A2 Code</strong></a>
 #### Description
 #### Results with modified code
 
-### Additional Task 3
+### 8. Additional Task 3
 <a href="task a3/A star task a3.py"><strong>Task A3 Astar Code</strong></a>
 <a href="task a3/Dijkstra task a3.py"><strong>Task A3 Dijkstra Code</strong></a>
 <a href="task a3/RRT task a3.py"><strong>Task A3 RRT Code</strong></a>
@@ -107,10 +107,10 @@
 #### Summarize
 
 <!-- Group Reflections -->
-## Reflections
+## 9. Reflections
 
 <!-- Presentation -->
-## Presentation Files
+## 10. Presentation Files
 
 <!-- Report -->
-## Report
+## 11. Report
