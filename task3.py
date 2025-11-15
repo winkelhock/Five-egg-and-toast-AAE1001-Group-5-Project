@@ -1,7 +1,6 @@
 import math
 import matplotlib.pyplot as plt
 
-# === INPUT PARAMETERS (from your assignment) ===
 total_passengers = 3300
 max_flights = 13
 fuel_cost_per_kg = 0.85          # C_F
@@ -15,7 +14,7 @@ fixed_cost_four = 2500
 capacities = [250, 300, 350, 400, 450]
 
 # === USER INPUT: Cruise time in minutes ===
-print("HK Thunder-450 Aircraft Cost Optimizer")
+print("HK Five55 Aircraft Cost Optimizer")
 print("="*50)
 T_best = float(input("Enter cruise time T_best (minutes), e.g. 600 for 10-hour flight: "))
 
