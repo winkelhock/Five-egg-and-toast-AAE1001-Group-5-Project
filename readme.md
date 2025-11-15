@@ -1,5 +1,5 @@
 <p align="center">
-  <h3 align="center">PolyU AAE1001 GitHub Project Group 5 Readme (Five Egg and Toast)</h3>
+  <h1 align="center">PolyU AAE1001 GitHub Project Group 5 Readme (Five Egg and Toast)</h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -49,22 +49,22 @@
 <!-- Tasks -->
 ## Tasks
 
-## Task 1
+### Task 1
 <a href="task1.py"><strong>Task 1 Code</strong></a>
 
-## Task 2
+### Task 2
 <a href="task2.py"><strong>Task 2 Code</strong></a>
 
-## Task 3
+### Task 3
 <a href="task3.py"><strong>Task 3 Code</strong></a>
 
-## Additional Task 1
+### Additional Task 1
 <a href="taska1.py"><strong>Task A1 Code</strong></a>
 
-## Additional Task 2
+### Additional Task 2
 <a href="taska2.py"><strong>Task A2 Code</strong></a>
 
-## Additional Task 3
+### Additional Task 3
 <a href="task a3/A star task a3.py"><strong>Task A3 Astar Code</strong></a>
 <a href="task a3/Dijkstra task a3.py"><strong>Task A3 Dijkstra Code</strong></a>
 <a href="task a3/RRT task a3.py"><strong>Task A3 RRT Code</strong></a>
