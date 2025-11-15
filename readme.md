@@ -12,10 +12,7 @@
     </li>
     <li>
       <a href="#task 1">Tasks 1</a>
-    </li>
-     <li>
-      <a href="#task 1 Bouns">Tasks 1 Bouns</a>
-    </li>
+    </li>>
      <li>
       <a href="#task 2">Tasks 2</a>
     </li>
@@ -55,27 +52,27 @@
 
 <!-- Task 1 -->
 ## Tasks
-### Task 1
+## Task 1
 
 <a href="task1.py"><strong>Task 1 Code</strong></a>
 
-### Task 2
+## Task 2
 
 <a href="task2.py"><strong>Task 2 Code</strong></a>
 
-### Task 3
+## Task 3
 
 <a href="task3.py"><strong>Task 3 Code</strong></a>
 
-### Task A1
+## Additional Task A1
 
 <a href="taska1.py"><strong>Task A1 Code</strong></a>
 
-### Task A2
+## Additional Task A2
 
 <a href="taska2.py"><strong>Task A2 Code</strong></a>
 
-### Task A3
+## Additional Task 3
 
 <a href="task a3/A star task a3.py"><strong>Task A3 Astar Code</strong></a>
 <a href="task a3/Dijkstra task a3.py"><strong>Task A3 Dijkstra Code</strong></a>
