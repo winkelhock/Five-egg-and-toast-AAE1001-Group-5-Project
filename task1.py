@@ -286,7 +286,7 @@ def main():
     rx, ry = a_star.planning(sx, sy, gx, gy)
 
     # ==== Added lines (cost evaluation) ====
-    Tbest = 74.5  # minutes (given trip time)
+    Tbest = 74.52905473706207  # minutes (given trip time)
 
     airbuses = {
         "A321neo": {
