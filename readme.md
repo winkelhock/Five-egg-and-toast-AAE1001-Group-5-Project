@@ -11,13 +11,13 @@
       <a href="#group-members-and-roles">Group Members and Roles</a>
     </li>
     <li>
-      <a href="#task 1">Tasks 1</a>
-    </li>>
+      <a href="#task 1">Task 1</a>
+    </li>
      <li>
-      <a href="#task 2">Tasks 2</a>
+      <a href="#task 2">Task 2</a>
     </li>
     <li>
-      <a href="#task 3">Tasks 3</a>
+      <a href="#task 3">Task 3</a>
     </li>
     <li>
       <a href="#additional task 1">Additonal Task 1</a>
