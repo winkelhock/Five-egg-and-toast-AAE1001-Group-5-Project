@@ -59,7 +59,9 @@
 
 ### Task A3
 
-<a href="taska3.py"><strong>Task A1 Code</strong></a>
+<a href="A star task a3.py"><strong>Task A3 Astar Code</strong></a>
+<a href="Dijkstra task a3.py"><strong>Task A3 Dijkstra Code</strong></a>
+<a href="RRT task a3.py"><strong>Task A3 RRT Code</strong></a>
 
 <!-- Presentation -->
 ## Presentation
